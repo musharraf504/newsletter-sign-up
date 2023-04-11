@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a9d5d67dae.js" crossorigin="anonymous"></script>
+
+    <title>Failed</title>
+</head>
+<body style="font-size: 2rem; font-family: sans-serif;">
+    <div style="margin: 50px; padding: 25px; border-radius: 10px; background-color: rgb(243, 104, 79);" class="success">
+        <h1>Something went wrong :( <i class="fa-solid fa-circle-exclamation"></i></h1>
+        <p>Please try again!</p>
+        <form action="/failure" method="post">
+            <button href="localhost:3000">Try again</button>
+        </form>
+    </div>
+<style>
+    button{
+        border: 0;
+        border-radius: 10px;
+        padding: 15px 20px;
+        font-family: sans-serif;
+        font-size: 2rem;
+        cursor: pointer;
+        background-color: rgb(255, 196, 0);
+        transition: 0.2s;
+    }
+    button:hover{
+        background-color: rgb(243, 187, 3);
+    }
+    i{
+        transition: 0.2s;
+    }
+    i:hover{
+        transform: rotate(180deg);
+    }
+</style>
+</body>
+</html>
