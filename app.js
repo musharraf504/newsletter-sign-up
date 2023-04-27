@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/", function(req,res){
-    res.sendFile(__dirname+"/signUp.html");
+    res.sendFile(__dirname+"/index.html");
 
 });
 
@@ -37,11 +37,11 @@ app.post("/",function(req,res){
 
     const jsonData = JSON.stringify(data);
 
-    const url = "https://us21.api.mailchimp.com/3.0/lists/c8e173e05a";
+    const url = "https://us21.api.mailchimp.com/3.0/lists/09338a60e4";
 
     const options = {
         method: "POST",
-        auth: "musharraf:fd44a4b584d7d38bdd0290801a9ce876-us21"
+        auth: "musharraf:efd92cb78479633c583b12c181b49067-us21"
     };
 
     const request = https.request(url, options, function(response){
@@ -73,10 +73,11 @@ app.listen(process.env.PORT || 3000,function(){
 
 // API key
 // c904c047c3ae9b880b906508bb1e43e4-us21 ---- revoked -----
-// fd44a4b584d7d38bdd0290801a9ce876-us21 ---- new API key -----
+// efd92cb78479633c583b12c181b49067-us21 ---- new API key -----
 
 // List/Audiance Id
-// c8e173e05a 
+// c8e173e05a -- expierd --
+// 09338a60e4 -- new -- 
 
 // Endpoind for API
 // https://us21.api.mailchimp.com/3.0/c8e173e05a
